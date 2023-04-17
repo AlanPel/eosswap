@@ -19,7 +19,7 @@ import ms from 'ms.macro'
 import { darkTheme } from 'theme/colors'
 
 import { SupportedL1ChainId, SupportedL2ChainId } from './chains'
-import { ARBITRUM_LIST, CELO_LIST, EOS_LIST, OPTIMISM_LIST, PLASMA_BNB_LIST } from './lists'
+import { ARBITRUM_LIST, CELO_LIST, OPTIMISM_LIST, PLASMA_BNB_LIST } from './lists'
 
 export const AVERAGE_L1_BLOCK_TIME = ms`12s`
 
@@ -228,8 +228,8 @@ const CHAIN_INFO: ChainInfoMap = {
     logoUrl: eosLogo,
     circleLogoUrl: eosCircleLogoUrl,
     squareLogoUrl: eosSquareLogoUrl,
-    nativeCurrency: { name: 'EOS', symbol: 'EOS', decimals: 18 },
-    defaultListUrl: EOS_LIST,
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+    defaultListUrl: PLASMA_BNB_LIST,
     color: darkTheme.chain_56,
     backgroundColor: darkTheme.chain_56_background,
   },
