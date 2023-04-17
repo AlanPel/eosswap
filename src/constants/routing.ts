@@ -105,7 +105,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     MATIC_BSC,
     CAKE_BSC,
   ],
-  [SupportedChainId.EOS]: [...WRAPPED_NATIVE_CURRENCIES_ONLY[SupportedChainId.EOS]],
+  [SupportedChainId.EOS]: [USDT_EOS],
   [SupportedChainId.CELO]: [CUSD_CELO, CEUR_CELO, CMC02_CELO, PORTAL_USDC_CELO, PORTAL_ETH_CELO],
 }
 export const ADDITIONAL_BASES: { [chainId: number]: { [tokenAddress: string]: Token[] } } = {
@@ -206,7 +206,7 @@ export const COMMON_BASES: ChainCurrencyList = {
     BUSD_BSC,
   ],
 
-  [SupportedChainId.EOS]: [nativeOnChain(SupportedChainId.EOS)],
+  [SupportedChainId.EOS]: [nativeOnChain(SupportedChainId.EOS), USDT_EOS],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend

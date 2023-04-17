@@ -352,6 +352,14 @@ export const BUSD_BSC = new Token(
   'BUSD'
 )
 
+export const USDT_EOS = new Token(
+  SupportedChainId.EOS,
+  '0x9fC25190baC66D7be4639268220d1Bd363ca2698',
+  18,
+  'USDT',
+  'USDT'
+)
+
 export const DAI_BSC = new Token(SupportedChainId.BNB, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'DAI')
 
 export const UNI: { [chainId: number]: Token } = {
