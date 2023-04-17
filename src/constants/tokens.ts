@@ -441,6 +441,19 @@ function getCeloNativeCurrency(chainId: number) {
   }
 }
 
+export function isEOS(chainId: number): chainId is SupportedChainId.EOS {
+  return chainId === SupportedChainId.EOS
+}
+
+function getEOSNativeCurrency(chainId: number) {
+  switch (chainId) {
+    case SupportedChainId.EOS:
+      return EOS_EOS
+    default:
+      throw new Error('Not eos')
+  }
+}
+
 function isMatic(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
   return chainId === SupportedChainId.POLYGON_MUMBAI || chainId === SupportedChainId.POLYGON
 }
@@ -507,6 +520,8 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = new MaticNativeCurrency(chainId)
   } else if (isCelo(chainId)) {
     nativeCurrency = getCeloNativeCurrency(chainId)
+  } else if (isEOS(chainId)) {
+    nativeCurrency = getEOSNativeCurrency(chainId)
   } else if (isBsc(chainId)) {
     nativeCurrency = new BscNativeCurrency(chainId)
   } else {
