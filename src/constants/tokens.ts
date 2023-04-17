@@ -430,10 +430,6 @@ export function isCelo(chainId: number): chainId is SupportedChainId.CELO | Supp
   return chainId === SupportedChainId.CELO_ALFAJORES || chainId === SupportedChainId.CELO
 }
 
-export function isEOS(chainId: number): chainId is SupportedChainId.EOS {
-  return chainId === SupportedChainId.EOS
-}
-
 function getCeloNativeCurrency(chainId: number) {
   switch (chainId) {
     case SupportedChainId.CELO_ALFAJORES:
@@ -511,8 +507,6 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = new MaticNativeCurrency(chainId)
   } else if (isCelo(chainId)) {
     nativeCurrency = getCeloNativeCurrency(chainId)
-  } else if (isEOS(chainId)) {
-    nativeCurrency = getEOSNativeCurrency(chainId)
   } else if (isBsc(chainId)) {
     nativeCurrency = new BscNativeCurrency(chainId)
   } else {
