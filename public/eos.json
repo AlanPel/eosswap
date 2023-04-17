@@ -17,5 +17,13 @@
       "chainId": 15557,
       "logoURI": "https://raw.githubusercontent.com/plasmadlt/token-list/master/assets/0x2ba592f78db6436527729929aaf6c908497cb200.png"
     },
+    {
+    "name": "EOS",
+    "address": "0x471EcE3750Da237f93B8E339c536989b8978a438",
+    "symbol": "EOS",
+    "decimals": 18,
+    "chainId": 42220,
+    "logoURI": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_CELO.png"
+  },
   ]
 }
