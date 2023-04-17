@@ -133,5 +133,4 @@ export const RPC_URLS = {
   [SupportedChainId.CELO_ALFAJORES]: FALLBACK_URLS[SupportedChainId.CELO_ALFAJORES],
   [SupportedChainId.BNB]: [QUICKNODE_RPC_URL, ...FALLBACK_URLS[SupportedChainId.BNB]],
   [SupportedChainId.EOS]: FALLBACK_URLS[SupportedChainId.EOS],
-  ],
 }
