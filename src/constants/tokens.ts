@@ -441,19 +441,6 @@ function getCeloNativeCurrency(chainId: number) {
   }
 }
 
-export function isEOS(chainId: number): chainId is SupportedChainId.EOS {
-  return chainId === SupportedChainId.EOS
-}
-
-function getEOSNativeCurrency(chainId: number) {
-  switch (chainId) {
-    case SupportedChainId.EOS:
-      return EOS_EOS
-    default:
-      throw new Error('Not eos')
-  }
-}
-
 function isMatic(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
   return chainId === SupportedChainId.POLYGON_MUMBAI || chainId === SupportedChainId.POLYGON
 }
