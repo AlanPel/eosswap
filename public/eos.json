@@ -1,0 +1,21 @@
+{
+  "name": "EOS Token List",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "logoURI": "https://raw.githubusercontent.com/plasmadlt/token-list/master/assets/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png",
+  "keywords": ["eos", "eos", "tokens"],
+  "timestamp": "2023-02-27T20:37:00.000+00:00",
+  "tokens": [
+    {
+      "name": "USDT",
+      "address": "0x30cd5ba5854f67dc8737df6421d10225c246760b",
+      "symbol": "USDT",
+      "decimals": 18,
+      "chainId": 15557,
+      "logoURI": "https://raw.githubusercontent.com/plasmadlt/token-list/master/assets/0x2ba592f78db6436527729929aaf6c908497cb200.png"
+    },
+  ]
+}
