@@ -4,9 +4,9 @@ const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
 if (typeof INFURA_KEY === 'undefined') {
   throw new Error(`REACT_APP_INFURA_KEY must be a defined environment variable`)
 }
-const QUICKNODE_RPC_URL = process.env.REACT_APP_EOS_RPC_URL
+const QUICKNODE_RPC_URL = process.env.REACT_APP_BNB_RPC_URL
 if (typeof QUICKNODE_RPC_URL === 'undefined') {
-  throw new Error(`REACT_APP_EOS_RPC_URL must be a defined environment variable`)
+  throw new Error(`REACT_APP_BNB_RPC_URL must be a defined environment variable`)
 }
 
 /**
@@ -22,9 +22,11 @@ if (typeof QUICKNODE_RPC_URL === 'undefined') {
 export const FALLBACK_URLS = {
   [SupportedChainId.MAINNET]: [
     // "Safe" URLs
-    'https://api.evm.eosnetwork.com/',
+    'https://api.mycryptoapi.com/eth',
+    'https://cloudflare-eth.com',
     // "Fallback" URLs
-    'https://api.evm.eosnetwork.com/',
+    'https://rpc.ankr.com/eth',
+    'https://eth-mainnet.public.blastapi.io',
   ],
   [SupportedChainId.GOERLI]: [
     // "Safe" URLs
@@ -99,7 +101,7 @@ export const FALLBACK_URLS = {
  */
 export const RPC_URLS = {
   [SupportedChainId.MAINNET]: [
-    `https://api.evm.eosnetwork.com/`,
+    `https://mainnet.infura.io/v3/${INFURA_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.MAINNET],
   ],
   [SupportedChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[SupportedChainId.GOERLI]],
@@ -130,8 +132,6 @@ export const RPC_URLS = {
   [SupportedChainId.CELO]: FALLBACK_URLS[SupportedChainId.CELO],
   [SupportedChainId.CELO_ALFAJORES]: FALLBACK_URLS[SupportedChainId.CELO_ALFAJORES],
   [SupportedChainId.BNB]: [QUICKNODE_RPC_URL, ...FALLBACK_URLS[SupportedChainId.BNB]],
-  [SupportedChainId.EOS]: [
-    `https://api.evm.eosnetwork.com/`,
-    ...FALLBACK_URLS[SupportedChainId.EOS],
+  [SupportedChainId.EOS]: FALLBACK_URLS[SupportedChainId.EOS],
   ],
 }
